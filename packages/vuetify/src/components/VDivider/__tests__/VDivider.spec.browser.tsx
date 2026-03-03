@@ -155,7 +155,8 @@ describe('VDivider', () => {
                   { idx % 4 !== 0 && (
                     <VDivider
                       vertical
-                      class="opacity-100 text-red my-n3"
+                      style="margin: -12px -6px -12px -7px"
+                      class="opacity-100 text-red"
                     ></VDivider>
                   )}
                   <VCol cols="3">
@@ -170,7 +171,7 @@ describe('VDivider', () => {
       expect(screen.getAllByCSS('.v-divider')).toHaveLength(6)
       // 80px + 2 * 12px (v-col + negative margin)
       for (const item of screen.getAllByCSS('.v-divider')) {
-        expect(item).toHaveStyle({ height: '104px' })
+        expect(item).toHaveStyle({ height: '105px' })
       }
     })
   })
